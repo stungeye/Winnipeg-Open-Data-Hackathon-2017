@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Winnipeg Libraries</title>
+  <meta name="description" content="Find Your Closest Winnipeg Library.">
+  <meta name="author" content="Kyle Geske - Stungeye.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css?v=1.4">
+</head>
+<body>
+  <div id="app" class="container">
+    <h1>Winnipeg Libraries</h1>
+    <button class="toggle" v-on:click="toggleClosest">Find Closest Libraries</button>
+
+    <div class="libraries row" v-cloak>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3" v-for="location in locations">
+        <div class="library card">
+          <img class="card-img-top" :src="location.map_url">
+          <div class="card-block">
+            <h3 class="card-title">{{ location.name }}</h3>
+            <div class="card-text">
+              <i title="accessible" class="fa fa-wheelchair" v-if="location.accessibilty"></i>
+              <i title="free wifi" class="fa fa-wifi" v-if="location.wifi"></i>
+              <i title="parking" class="fa fa-car" v-if="location.parking_lot"></i>
+              <i title="room rentals" class="fa fa-calendar" v-if="location.room_rentals"></i>
+            </div>
+            <div class="card-text">{{ location.address }}</div>
+            <div class="card-text"><a :href="location.website">Visit Website</a></div>
+          </div> <!-- .card-block -->
+        </div> <!-- .library.card -->
+      </div> <!-- .col-*  -->
+    </div> <!-- .libraries.row -->
+  </div> <!-- #app -->
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6yI2ou9g5Vj3Xj_bc0bzr4ET0Y3j_dv4"></script>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://use.fontawesome.com/0866b3427d.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

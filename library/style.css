@@ -1,0 +1,33 @@
+.card {
+  margin-bottom: 2em;
+}
+
+.card-title  {
+  min-height: 4em;
+}
+
+.card-block {
+  padding: 1em;
+}
+
+.card img {
+  width: 100%;
+}
+
+h1 {
+  margin: 1em 0;
+}
+
+button.toggle {
+  margin-bottom: 2em;
+}
+
+i.fa {
+  margin-right: 0.4em;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+
