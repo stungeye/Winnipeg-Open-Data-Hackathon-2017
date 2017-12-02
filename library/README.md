@@ -2,7 +2,7 @@
 
 Maps all Winnipeg library locations with ability to sort by distance.
 
-[View Library App](https://stungeye.com/opendata2017/library/)
+Demo: [View Library App](https://stungeye.com/opendata2017/library/)
 
 Dataset: [https://data.winnipeg.ca/Libraries/Library-base-/bt47-pkkm/data](https://data.winnipeg.ca/Libraries/Library-base-/bt47-pkkm/data)
 
