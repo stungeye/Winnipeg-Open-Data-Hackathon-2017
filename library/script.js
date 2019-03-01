@@ -65,7 +65,7 @@ function addMaps(location) {
 }
 
 function google_map_image(address) {
-  var google_maps_api_key = 'AIzaSyC6Tp7oW8tqUgT1Pin_D5G0tpIiI59lMAk'
+  var google_maps_api_key = 'YOUR_GOOGLE_STATIC_MAPS_API_KEY'
 
   return 'https://maps.googleapis.com/maps/api/staticmap?markers=' + address + '&zoom=15&size=300x300&sensor=false&key=' + google_maps_api_key
 }
